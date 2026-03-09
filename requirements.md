@@ -12,10 +12,13 @@ Vani-Chitra is a document accessibility application designed to help rural India
 - **Source_Language**: The language in which the original document is written
 - **Target_Language**: The regional Indian language selected by the user for output
 - **OCR_Service**: Amazon Textract service for text extraction
-- **Intelligence_Service**: Amazon Bedrock (Claude/Llama) for text processing
+- **Intelligence_Service**: Amazon Bedrock with Claude 3.5 Sonnet for text processing, summarization, and multimodal generation
 - **TTS_Service**: Amazon Polly for text-to-speech conversion
+- **Transcribe_Service**: Amazon Transcribe for voice-to-text conversion
 - **Simplified_Summary**: A plain-language version of the document content
 - **Audio_Output**: Speech synthesis of the simplified summary
+- **Comic_Storyboard**: A 3-panel visual narrative generated from multimodal inputs
+- **RAG_Workflow**: Retrieval-Augmented Generation combining image and voice data
 
 ## Requirements
 
@@ -162,3 +165,57 @@ Vani-Chitra is a document accessibility application designed to help rural India
 3. WHEN Intelligence_Service generates a Simplified_Summary, THE System SHALL complete processing within 15 seconds
 4. WHEN TTS_Service generates audio, THE System SHALL complete synthesis within 10 seconds per 1000 words
 5. THE System SHALL function on devices with minimum 2GB RAM and Android 8.0 or iOS 12.0
+
+### Requirement 13: Multimodal RAG Comic Storyboard Generation
+
+**User Story:** As a user who learns better through visual storytelling, I want the system to create a simple comic storyboard from my document and voice explanation, so that I can understand complex information through pictures and narrative.
+
+#### Acceptance Criteria
+
+1. WHEN a user uploads a document image AND provides voice input, THE System SHALL store both in S3 and trigger the RAG workflow
+2. WHEN voice input is received, THE System SHALL use Transcribe_Service to convert speech to text with timestamp alignment
+3. WHEN multimodal inputs are ready, THE System SHALL invoke Amazon Bedrock with Claude 3.5 Sonnet to analyze both image and transcribed voice data
+4. WHEN generating the storyboard, THE System SHALL use RAG to retrieve relevant context from the document image and voice transcript
+5. WHEN Claude 3.5 Sonnet processes the multimodal data, THE System SHALL generate a 3-panel comic storyboard with:
+   - Panel 1: Introduction showing the document type and main subject
+   - Panel 2: Key information or problem explained visually
+   - Panel 3: Action required or resolution depicted clearly
+6. WHEN the storyboard is generated, THE System SHALL include simple captions in the user's Target_Language below each panel
+7. WHEN the storyboard is complete, THE System SHALL cache it locally for offline access
+8. THE System SHALL use serverless AWS Lambda functions to orchestrate the RAG workflow
+9. THE System SHALL use Amazon S3 for storing document images, voice recordings, and generated storyboards
+10. WHEN the RAG workflow executes, THE System SHALL complete storyboard generation within 30 seconds
+
+### Requirement 14: Voice Input and Transcription
+
+**User Story:** As a user who cannot type, I want to explain my document using voice, so that the system can understand my questions and context without requiring text input.
+
+#### Acceptance Criteria
+
+1. WHEN a user accesses the application, THE System SHALL provide a voice recording option alongside text input
+2. WHEN a user records voice input, THE System SHALL accept audio in common formats (MP3, WAV, M4A)
+3. WHEN voice recording is uploaded, THE System SHALL validate that the audio duration does not exceed 5 minutes
+4. WHEN audio is uploaded to S3, THE System SHALL trigger Transcribe_Service to convert speech to text
+5. WHEN Transcribe_Service processes audio, THE System SHALL detect the spoken language automatically
+6. WHEN transcription completes, THE System SHALL provide the text transcript to the user for confirmation
+7. IF transcription confidence is low (below 80%), THEN THE System SHALL notify the user and offer re-recording
+8. WHEN transcription is confirmed, THE System SHALL use the transcript as input for the RAG workflow or Q&A system
+9. THE System SHALL support voice input in all supported Target_Languages (Hindi, Marathi, Tamil, Telugu, Bengali, Gujarati, Kannada, Malayalam, Punjabi, English)
+10. THE System SHALL store voice recordings temporarily in S3 and delete them within 24 hours after processing
+
+### Requirement 15: AWS Serverless Architecture
+
+**User Story:** As a system administrator, I want the application to use AWS serverless services, so that it scales automatically and minimizes operational overhead.
+
+#### Acceptance Criteria
+
+1. THE System SHALL use AWS Lambda functions for all backend processing logic
+2. THE System SHALL use Amazon API Gateway for RESTful API endpoints
+3. THE System SHALL use Amazon S3 for object storage of images, audio, and generated content
+4. THE System SHALL use Amazon DynamoDB for storing user preferences, session data, and document metadata
+5. THE System SHALL use AWS Step Functions to orchestrate the multimodal RAG workflow
+6. WHEN a document is uploaded, THE System SHALL trigger Lambda functions via S3 event notifications
+7. WHEN processing completes, THE System SHALL use Amazon EventBridge for event-driven notifications
+8. THE System SHALL use AWS Secrets Manager for storing API keys and service credentials
+9. THE System SHALL implement AWS IAM roles with least-privilege access for all Lambda functions
+10. THE System SHALL use Amazon CloudWatch for logging, monitoring, and alerting

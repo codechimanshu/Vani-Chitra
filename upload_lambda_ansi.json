@@ -1,0 +1,50 @@
+﻿{
+    "Configuration": {
+        "FunctionName": "vani-chitra-upload-image",
+        "FunctionArn": "arn:aws:lambda:us-east-1:080777914141:function:vani-chitra-upload-image",
+        "Runtime": "python3.10",
+        "Role": "arn:aws:iam::080777914141:role/service-role/vani-chitra-upload-image-role-mi1ivbqi",
+        "Handler": "lambda_function.lambda_handler",
+        "CodeSize": 1575,
+        "Description": "",
+        "Timeout": 3,
+        "MemorySize": 128,
+        "LastModified": "2026-03-08T19:39:33.000+0000",
+        "CodeSha256": "epQi5gnAW3WNsia7X4y+eH/Q//yho+uW8iX8sizD3I0=",
+        "Version": "$LATEST",
+        "Environment": {
+            "Variables": {
+                "S3_PREFIX": "uploads/",
+                "S3_BUCKET_NAME": "vani-chitra"
+            }
+        },
+        "TracingConfig": {
+            "Mode": "PassThrough"
+        },
+        "RevisionId": "471447f5-d480-4c7f-a6a3-bc19ac112bc2",
+        "State": "Active",
+        "LastUpdateStatus": "Successful",
+        "PackageType": "Zip",
+        "Architectures": [
+            "x86_64"
+        ],
+        "EphemeralStorage": {
+            "Size": 512
+        },
+        "SnapStart": {
+            "ApplyOn": "None",
+            "OptimizationStatus": "Off"
+        },
+        "RuntimeVersionConfig": {
+            "RuntimeVersionArn": "arn:aws:lambda:us-east-1::runtime:a83ff4af729aad44fd64166b2291afbcad56a300a3ab5e17532c29ecf9f5b3e0"
+        },
+        "LoggingConfig": {
+            "LogFormat": "Text",
+            "LogGroup": "/aws/lambda/vani-chitra-upload-image"
+        }
+    },
+    "Code": {
+        "RepositoryType": "S3",
+        "Location": "https://prod-04-2014-tasks.s3.us-east-1.amazonaws.com/snapshots/080777914141/vani-chitra-upload-image-cdb25679-3bcc-4af3-a66b-70f460fd8917?versionId=iuvzQw0wtt5boBwrkBIVCD0gozTNjvdn&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEF4aCXVzLWVhc3QtMSJHMEUCIESpd%2BZ7NM4V6jDkHNT6%2BoY8%2F%2F3P7y6R9gwuSg5BGg7HAiEAixIKsPHCQy64MTLgXWQBe1SgepHeozb0f%2BzPT8Jp%2BJkqiwIIJxAAGgw3NDk2Nzg5MDI4MzkiDCBIW8jXygr%2Bed%2BZUCroAcXqQTGwJQKNDSSC48oelTwZ0J5sUD%2FzyLCs8kC35Ns4SSHlRrydsX%2Fq3XePvQ2BrTlLOGL5W6QRQnT828CxBzXfipTIU1iO1aoYD64qJ0ZlsLI1uGo%2FcitG081zO95z%2BWZGsBxW7sNGuZTEK9SL3S54VY1aT%2BemhgZRnCFZ5%2BsjtIO3Bl0So%2BT6qJThmllif89dzLNy5WYeHB3S22pJOvY53uvPPbgLJtDBzIDvNxK1uDiC0YUwLh4oBVZc9kPPoU8AJ%2FZu096MbHmC1%2F3MbqanD57A6NNq6qMPZpHPca8iriEhz6i3sFsw9Le5zQY6jQGWEHpuIU4cmuzpbcXtjZ4fAvRQIAvjoYYBytMpjsrHYbzW1CWoiMQBpuK0uPzO69P8pxe%2Bl6snYKmQlgOEvtSbOOksXMNjlcooNUdoZE0yxQtTu%2B%2FUYqqR7tBPQtftvHvJ%2F75gli5%2FDEd9JrD542uwz%2FCBjoS8hnoPGCglKpwFWa8oylXb6CUzKWbnVZo%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260309T143613Z&X-Amz-SignedHeaders=host&X-Amz-Expires=599&X-Amz-Credential=ASIA25DCYHY322IIHHKG%2F20260309%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d20ea2542de0f0b4847f5220180527fe6a788fd3a31a23cd5e18f4536ef74e86"
+    }
+}

@@ -1,0 +1,16 @@
+# Python dependencies for Vani-Chitra Lambda function
+# Updated for Amazon Bedrock Claude 3.5 Sonnet support
+
+# Boto3 and Botocore with Bedrock Runtime support
+boto3>=1.35.36
+botocore>=1.35.36
+
+# Note: AWS Lambda includes boto3/botocore by default, but these versions
+# ensure compatibility with:
+# - Amazon Bedrock Runtime API
+# - Claude 3.5 Sonnet (anthropic.claude-3-5-sonnet-20241022-v2:0)
+# - Multimodal image input support
+# - Latest S3 and Transcribe features
+
+# For local development/testing, install with:
+# pip install -r requirements.txt

@@ -1,0 +1,50 @@
+{
+    "items": [
+        {
+            "id": "3za52t",
+            "parentId": "ew3tl04352",
+            "pathPart": "transcribe-audio",
+            "path": "/transcribe-audio",
+            "resourceMethods": {
+                "OPTIONS": {},
+                "POST": {}
+            }
+        },
+        {
+            "id": "ew3tl04352",
+            "path": "/",
+            "resourceMethods": {
+                "OPTIONS": {}
+            }
+        },
+        {
+            "id": "fmbyi5",
+            "parentId": "ew3tl04352",
+            "pathPart": "generater-storybook",
+            "path": "/generater-storybook",
+            "resourceMethods": {
+                "OPTIONS": {},
+                "POST": {}
+            }
+        },
+        {
+            "id": "mmprcw",
+            "parentId": "ew3tl04352",
+            "pathPart": "generate-audio",
+            "path": "/generate-audio",
+            "resourceMethods": {
+                "POST": {}
+            }
+        },
+        {
+            "id": "zvntpe",
+            "parentId": "ew3tl04352",
+            "pathPart": "upload-image",
+            "path": "/upload-image",
+            "resourceMethods": {
+                "OPTIONS": {},
+                "POST": {}
+            }
+        }
+    ]
+}
