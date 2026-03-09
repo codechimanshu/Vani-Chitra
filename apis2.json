@@ -1,0 +1,21 @@
+{
+    "items": [
+        {
+            "id": "b5jozygvm9",
+            "name": "vani-chitra-api",
+            "description": "API for Vani Chitra AI project",
+            "createdDate": "2026-03-08T16:20:54+05:30",
+            "apiKeySource": "HEADER",
+            "endpointConfiguration": {
+                "types": [
+                    "REGIONAL"
+                ],
+                "ipAddressType": "ipv4"
+            },
+            "disableExecuteApiEndpoint": false,
+            "rootResourceId": "ew3tl04352",
+            "securityPolicy": "TLS_1_0",
+            "apiStatus": "AVAILABLE"
+        }
+    ]
+}

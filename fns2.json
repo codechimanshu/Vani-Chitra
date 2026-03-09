@@ -1,0 +1,186 @@
+{
+    "Functions": [
+        {
+            "FunctionName": "vani-chitra-stack-DocumentProcessorFunction-wRf6aEiK7U1Y",
+            "FunctionArn": "arn:aws:lambda:us-east-1:080777914141:function:vani-chitra-stack-DocumentProcessorFunction-wRf6aEiK7U1Y",
+            "Runtime": "nodejs20.x",
+            "Role": "arn:aws:iam::080777914141:role/vani-chitra-stack-DocumentProcessorFunctionRole-gi5NtPBJ0IOf",
+            "Handler": "processor.handler",
+            "CodeSize": 4066331,
+            "Description": "",
+            "Timeout": 60,
+            "MemorySize": 1024,
+            "LastModified": "2026-03-08T11:41:38.855+0000",
+            "CodeSha256": "9hurweZhcmd2VdynLJbUNnvtrZMhza1VaSd/4/fZqD4=",
+            "Version": "$LATEST",
+            "Environment": {
+                "Variables": {
+                    "OUTPUT_BUCKET": "vani-chitra-stack-output-bucket"
+                }
+            },
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "47639074-96bb-455f-8529-f01b1cc79117",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/vani-chitra-stack-DocumentProcessorFunction-wRf6aEiK7U1Y"
+            }
+        },
+        {
+            "FunctionName": "vani-chitra-generate-storyboard",
+            "FunctionArn": "arn:aws:lambda:us-east-1:080777914141:function:vani-chitra-generate-storyboard",
+            "Runtime": "python3.10",
+            "Role": "arn:aws:iam::080777914141:role/service-role/vani-chitra-generate-storyboard-role-t14nkvam",
+            "Handler": "lambda_function.lambda_handler",
+            "CodeSize": 3065,
+            "Description": "",
+            "Timeout": 3,
+            "MemorySize": 128,
+            "LastModified": "2026-03-08T10:43:15.000+0000",
+            "CodeSha256": "cIcu4y5WXkDhrQLk97Yk8U+/4trbFDjjOjGNqI/mM6g=",
+            "Version": "$LATEST",
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "616628b2-d320-42e5-a0a7-0f844b594bae",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/vani-chitra-generate-storyboard"
+            }
+        },
+        {
+            "FunctionName": "vani-chitra-generate-audio",
+            "FunctionArn": "arn:aws:lambda:us-east-1:080777914141:function:vani-chitra-generate-audio",
+            "Runtime": "python3.10",
+            "Role": "arn:aws:iam::080777914141:role/service-role/vani-chitra-generate-audio-role-9dq296rm",
+            "Handler": "lambda_function.lambda_handler",
+            "CodeSize": 1326,
+            "Description": "",
+            "Timeout": 3,
+            "MemorySize": 128,
+            "LastModified": "2026-03-08T10:45:27.000+0000",
+            "CodeSha256": "BD+ryu+ktnrhb/33mp1275e+jRSeZwzh2zQzmwjX0BI=",
+            "Version": "$LATEST",
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "e1d0e700-84b9-483f-bf20-c674d6806147",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/vani-chitra-generate-audio"
+            }
+        },
+        {
+            "FunctionName": "vani-chitra-transcribe-audio",
+            "FunctionArn": "arn:aws:lambda:us-east-1:080777914141:function:vani-chitra-transcribe-audio",
+            "Runtime": "python3.10",
+            "Role": "arn:aws:iam::080777914141:role/service-role/vani-chitra-transcribe-audio-role-eoii5vfi",
+            "Handler": "lambda_function.lambda_handler",
+            "CodeSize": 2342,
+            "Description": "",
+            "Timeout": 90,
+            "MemorySize": 512,
+            "LastModified": "2026-03-08T17:54:20.000+0000",
+            "CodeSha256": "NmqWD3B2wsF4fuChI25Bps/5NBRnvfwK0n+xtI6sOd4=",
+            "Version": "$LATEST",
+            "Environment": {
+                "Variables": {
+                    "S3_PREFIX": "audio/",
+                    "S3_BUCKET_NAME": "vani-chitra"
+                }
+            },
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "a7bf4f63-4b29-4fae-a759-3c63946b908f",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/vani-chitra-transcribe-audio"
+            }
+        },
+        {
+            "FunctionName": "vani-chitra-upload-image",
+            "FunctionArn": "arn:aws:lambda:us-east-1:080777914141:function:vani-chitra-upload-image",
+            "Runtime": "python3.10",
+            "Role": "arn:aws:iam::080777914141:role/service-role/vani-chitra-upload-image-role-mi1ivbqi",
+            "Handler": "lambda_function.lambda_handler",
+            "CodeSize": 1889,
+            "Description": "",
+            "Timeout": 3,
+            "MemorySize": 128,
+            "LastModified": "2026-03-08T11:42:15.000+0000",
+            "CodeSha256": "SixJNNOEue1S0BQnxM10lcMzyimy7XiTj4fbHo6H6JY=",
+            "Version": "$LATEST",
+            "Environment": {
+                "Variables": {
+                    "S3_PREFIX": "uploads/",
+                    "S3_BUCKET_NAME": "vani-chitra"
+                }
+            },
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "0c65a0a2-ef28-4421-a871-0157e4caa231",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/vani-chitra-upload-image"
+            }
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "Configuration": {
+        "FunctionName": "vani-chitra-transcribe-audio",
+        "FunctionArn": "arn:aws:lambda:us-east-1:080777914141:function:vani-chitra-transcribe-audio",
+        "Runtime": "python3.10",
+        "Role": "arn:aws:iam::080777914141:role/service-role/vani-chitra-transcribe-audio-role-eoii5vfi",
+        "Handler": "lambda_function.lambda_handler",
+        "CodeSize": 2342,
+        "Description": "",
+        "Timeout": 90,
+        "MemorySize": 512,
+        "LastModified": "2026-03-08T13:58:42.000+0000",
+        "CodeSha256": "NmqWD3B2wsF4fuChI25Bps/5NBRnvfwK0n+xtI6sOd4=",
+        "Version": "$LATEST",
+        "Environment": {
+            "Variables": {
+                "S3_PREFIX": "audio/",
+                "S3_BUCKET_NAME": "vani-chitra"
+            }
+        },
+        "TracingConfig": {
+            "Mode": "PassThrough"
+        },
+        "RevisionId": "2f5f4e03-1256-463e-ae35-4cce1b7c8441",
+        "State": "Active",
+        "LastUpdateStatus": "Successful",
+        "PackageType": "Zip",
+        "Architectures": [
+            "x86_64"
+        ],
+        "EphemeralStorage": {
+            "Size": 512
+        },
+        "SnapStart": {
+            "ApplyOn": "None",
+            "OptimizationStatus": "Off"
+        },
+        "RuntimeVersionConfig": {
+            "RuntimeVersionArn": "arn:aws:lambda:us-east-1::runtime:a83ff4af729aad44fd64166b2291afbcad56a300a3ab5e17532c29ecf9f5b3e0"
+        },
+        "LoggingConfig": {
+            "LogFormat": "Text",
+            "LogGroup": "/aws/lambda/vani-chitra-transcribe-audio"
+        }
+    },
+    "Code": {
+        "RepositoryType": "S3",
+        "Location": "https://prod-04-2014-tasks.s3.us-east-1.amazonaws.com/snapshots/080777914141/vani-chitra-transcribe-audio-89c4f890-1d68-4417-873d-d7813ae11dcd?versionId=xErtArPcCWetRhMdy1G3cp5.seBnQ0ke&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEgaCXVzLWVhc3QtMSJIMEYCIQCN9LXRgModMVmDc0ZSu%2FEPa%2FRk6YCjiDTBsbXwh9DXdgIhAIg71KDYfWaN9dJDoI8nLjiplTb%2B0Hgy%2BGnIlQOuqFFLKosCCBAQABoMNzQ5Njc4OTAyODM5IgwPYiSpg%2BYekvyf1Wsq6AFzIoTwgBA%2F3OP%2FVpCwNyKDPjLoY8s17Oph7y3SxYAWXLlObBSBW2%2BaJ542Bjs6Pg1%2BRndrGFeypv2Ai%2F9qvz1eJPGltPf9A%2FmVV%2Fh1rTxlAnTtcSdFxBkyjE0fAM2sOQOYZqWWdS%2BYN339jcQKlQaRusAM3RmscH0p6dHwyldERhY4NhnPwJmkJPPkxnaclw5Ri3Ei9dp8hjlpZOHp%2BLUrCVWCviZ42BSnV%2BekNjjY5pn%2F%2B9DjHLDZI2%2B6Nx5l3DnilH%2FCyKJX5Qg6NCSJJFqk8B%2Fmf0x75wP6zYmmZ0cwCyH3AnqfRYI4MJHCtM0GOowBFmg0WgVo88ONDOoJ7iaGmppdh3K0yQA9FU3ja1%2FOusmUwl05Or19U4c4%2FiGWG5Fz0RpsImVfvsu%2FSqLO92NdKtxQcnJkVZiABstr%2BIqyXyAYy4tIyO3ZaWcRKERO%2FU%2FzH%2BXxauIgW3DgO%2FS4IpLnpo%2FUklceonm7elfO6Nvpuc0RKrzT81gxFJ5aMss%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260308T175001Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIA25DCYHY33LTF5KVQ%2F20260308%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=f587e1950dbaf604336954d2357542a807f6963adfdab61c1ca815c416fb3b99"
+    }
+}
